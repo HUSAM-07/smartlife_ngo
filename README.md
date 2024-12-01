@@ -1,4 +1,35 @@
+# SmartLife NGO Platform
+
+A modern web platform built with Next.js for managing youth development programs and community initiatives.
+
+## Tech Stack & Architecture
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+```mermaid
+flowchart TD
+subgraph Frontend
+N[Next.js 15.0.3] --> R[React 19 RC]
+R --> TC[TailwindCSS]
+R --> FM[Framer Motion]
+R --> RHF[React Hook Form]
+R --> L[Lucide Icons]
+end
+subgraph UI Components
+TC --> RAD[Radix UI]
+TC --> SD[Shadcn Components]
+FM --> A[Animations]
+end
+subgraph State Management
+RHF --> FV[Form Validation]
+RHF --> Z[Zod Schema]
+end
+subgraph Build Tools
+T[TypeScript] --> N
+ESL[ESLint] --> N
+TP[Turbopack] --> N
+end
+```
 
 ## Getting Started
 
@@ -20,17 +51,95 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+mermaid
+flowchart LR
+subgraph Development
+L[Local Development] --> T[TypeScript Checking]
+T --> E[ESLint Validation]
+E --> B[Build Process]
+end
+subgraph Deployment
+B --> V[Vercel Platform]
+V --> P[Production]
+P --> M[Monitoring]
+end
+subgraph CI/CD
+E --> A[Automated Testing]
+A --> D[Deploy Preview]
+D --> V
+end
+```
+
+## Feature Architecture
+
+mermaid
+flowchart TD
+subgraph Core Features
+P[Programs Management] --> YL[Youth Leadership]
+P --> DS[Digital Skills]
+P --> CS[Community Service]
+P --> EW[Entrepreneurship]
+P --> MP[Mentorship]
+P --> EI[Environmental]
+end
+subgraph UI/UX
+AN[Animations] --> LA[Layout Animations]
+AN --> TA[Transition Animations]
+AN --> HA[Hover Effects]
+RE[Responsive Design] --> M[Mobile First]
+RE --> T[Tablet]
+RE --> D[Desktop]
+end
+subgraph Components
+UI[UI Elements] --> BTN[Buttons]
+UI --> CD[Cards]
+UI --> NV[Navigation]
+UI --> IC[Icons]
+end
+```
+
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Key Features
+
+- **Modern Tech Stack**: Built with Next.js 15, React 19, and TypeScript
+- **Responsive Design**: Mobile-first approach with TailwindCSS
+- **Smooth Animations**: Powered by Framer Motion
+- **Accessible Components**: Built on Radix UI primitives
+- **Type Safety**: Full TypeScript support
+- **Performance Optimized**: Using Next.js app router and Turbopack
+- **Development Tools**: ESLint configuration for code quality
+
+## Project Structure
+smartlife_ngo/
+├── app/
+│ ├── programs/
+│ │ ├── page.tsx
+│ │ └── [program]/
+│ │ └── page.tsx
+│ └── page.tsx
+├── components/
+│ └── ui/
+├── public/
+└── styles/
+
+
+
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://react.dev)
+- [TailwindCSS Documentation](https://tailwindcss.com/docs)
+- [Framer Motion Documentation](https://www.framer.com/motion/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The application is optimized for deployment on the [Vercel Platform](https://vercel.com).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please read our contributing guidelines for details.
