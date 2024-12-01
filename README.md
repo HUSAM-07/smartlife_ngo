@@ -112,6 +112,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Development Tools**: ESLint configuration for code quality
 
 ## Project Structure
+
+```
 smartlife_ngo/
 ├── app/
 │ ├── programs/
@@ -123,7 +125,7 @@ smartlife_ngo/
 │ └── ui/
 ├── public/
 └── styles/
-
+```
 
 
 ## Learn More
